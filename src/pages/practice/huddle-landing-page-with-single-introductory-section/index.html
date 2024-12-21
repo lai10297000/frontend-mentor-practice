@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/huddle-landing-page-with-single-introductory-section/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Huddle landing page with single introductory section</title>
+  </head>
+  <body role="main">
+    <div class="container">
+      <div class="top-section">
+        <img
+          src="/huddle-landing-page-with-single-introductory-section/logo.svg"
+          class="logo"
+          alt="logo"
+        />
+      </div>
+
+      <div class="middle-section">
+        <img
+          src="/huddle-landing-page-with-single-introductory-section/illustration-mockups.svg"
+          class="hero-image"
+          alt="hero-image"
+        />
+        <div class="text-container">
+          <h1>Build The Community<br />Your Fans Will Love</h1>
+          <p>
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <div class="button-container">
+            <a class="button" href="#">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-section">
+        <div class="social-flex" role="complementary">
+          <i class="fa fa-brands fa-facebook-f"></i>
+          <i class="fa fa-brands fa-twitter"></i>
+          <i class="fa fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  :root {
+    --violet: hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+    --mobile-image: url("/huddle-landing-page-with-single-introductory-section/bg-mobile.svg");
+    --desktop-image: url("/huddle-landing-page-with-single-introductory-section/bg-desktop.svg");
+  }
+
+  body {
+    background-color: var(--violet);
+    color: white;
+    font-family: "Poppins", serif;
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--mobile-image) no-repeat center/cover;
+  }
+
+  .top-section {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-left: 5%;
+  }
+
+  .middle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 80px 5%;
+  }
+
+  .hero-image {
+    width: 80%;
+    object-fit: contain;
+  }
+
+  .text-container {
+    max-width: 600px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  p {
+    opacity: 0.9;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    margin: 20px 0;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: var(--violet);
+    font-family: "Open Sans", serif;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 15px 15px;
+    font-size: 16px;
+    min-width: 180px;
+    max-width: 200px;
+    border-radius: 30px;
+    border: 0.5px solid rgb(32, 32, 32);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .button-section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+
+  .social-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+  }
+
+  .social-flex > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  .button:hover {
+    background-color: var(--magenta);
+    color: white;
+  }
+
+  .fa-facebook-f:hover,
+  .fa-twitter:hover,
+  .fa-instagram:hover {
+    border: 1px solid var(--magenta);
+    color: var(--magenta);
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .container {
+      background: var(--desktop-image) no-repeat center/cover;
+    }
+
+    .middle-section {
+      flex-direction: row;
+      align-items: center;
+      gap: 40px 20px;
+      padding: 40px 5%;
+    }
+
+    .hero-image {
+      width: 50vw;
+      object-fit: contain;
+    }
+
+    .text-container {
+      text-align: left;
+      padding-left: 40px;
+      align-items: flex-start;
+    }
+
+    .button-section {
+      padding: 20px;
+      justify-content: flex-end;
+    }
+
+    .social-flex {
+      padding-right: 5%;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+  }
+</style>
