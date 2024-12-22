@@ -14,8 +14,36 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
-    <slot />
-    <Footer />
+    <div class="wrapper">
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  main {
+    flex-grow: 1;
+    min-height: 80vh;
+  }
+
+  footer {
+    margin-top: auto;
+  }
+</style>
