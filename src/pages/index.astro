@@ -5,21 +5,25 @@ const pageTitle = "";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <ul>
+  <div>
     <Card
       url="./practice/huddle-landing-page-with-single-introductory-section"
       title="Huddle Landing Page with Single Introductory Section"
+      image="/frontend-mentor-practice/images/huddle-241223-124158.png"
     />
     <Card
       url="./practice/sunnyside-agency-landing-page"
       title="Sunnyside Agency Landing Page"
-  </ul>
+      image="/frontend-mentor-practice/images/sunnyside-241223-124223.png"
+    />
+  </div>
 </BaseLayout>
 
 <style>
-  ul {
-    /* list-style-type: none; */
-    padding: 100px;
-    margin: 0 5%;
+  div {
+    padding: 80px 5% 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 </style>
