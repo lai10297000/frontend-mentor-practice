@@ -1,0 +1,494 @@
+:root {
+  /* Primary Colors */
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+
+  /* Neutral Colors */
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+
+  /* Font Sizes */
+  --h1-size: 40px;
+  --h2-size: 32px;
+  --h3-size: 22px;
+  --body-size: 18px;
+  /* font weight: 400, 600 */
+}
+
+/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+
+html {
+  font-size: var(--body-size);
+  color: var(--dark-grayish-blue);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: 600;
+  text-align: center;
+  margin: 60px 0 0;
+  background-color: transparent;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  font-weight: 600;
+  text-align: center;
+  background-color: transparent;
+}
+
+h3 {
+  font-size: var(--h3-size);
+  font-weight: 600;
+  background-color: transparent;
+}
+
+p {
+  font-size: var(--body-size);
+  color: var(--grayish-blue);
+  background-color: transparent;
+  line-height: 1.5rem;
+}
+
+.header-description {
+  text-align: center;
+  margin: 20px 0 40px;
+  padding: 0 20%;
+}
+
+.btn-container {
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--strong-cyan);
+  color: hsl(0, 0%, 96%);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  background-color: var(--light-blue);
+  color: hsl(0, 0%, 96%);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-secondary:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("/frontend-mentor-practice/clipboard-landing-page/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 70vh;
+  padding: 40px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  background-color: transparent;
+  height: 6rem;
+}
+
+/* Features Section */
+.features {
+  height: 100vh;
+  padding: 40px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-content {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.features-item {
+  flex: 1;
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 0 2%;
+  justify-content: center;
+  align-items: left;
+  position: relative;
+}
+
+.features-item img {
+  background-color: transparent;
+  width: auto;
+  height: 65vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.features h3 {
+  margin: 56px 15% 0;
+}
+
+.feature p {
+  margin: 10px 15%;
+  font-size: 0.8rem;
+}
+
+/* Access Section */
+.access {
+  height: 100vh;
+  padding: 40px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.access img {
+  background-color: transparent;
+  height: 75%;
+}
+
+/* Workflow Section */
+.workflow {
+  /* background-color: antiquewhite; */
+  height: 80vh;
+  padding: 40px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.workflow-toollist {
+  margin: 20px 0;
+  padding: 0 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.workflow-tool {
+  flex: 1;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 0 2%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.workflow-tool img {
+  height: 30px;
+}
+.workflow-tool h3 {
+  margin: 20px 0 10px;
+}
+
+.workflow-tool p {
+  height: 72px;
+  margin: 10px 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.partner-logos {
+  width: 100%;
+  margin: 40px 0;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partner-logos img {
+  width: calc(20% - 2%);
+  padding: 2%;
+}
+
+/* CTA Section */
+.cta {
+  height: 50vh;
+  padding: 40px 5% 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 0%, 96%);
+  padding: 40px 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  background-color: transparent;
+  height: 2.5rem;
+  padding: 0 5%;
+}
+
+.footer-links {
+  background-color: transparent;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5rem;
+  row-gap: 0.8rem;
+}
+
+.footer-links a {
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  font-size: 0.8rem;
+}
+
+.footer-links a:hover {
+  cursor: pointer;
+  color: var(--strong-cyan);
+}
+
+.social-links {
+  background-color: transparent;
+  width: auto;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.social-links a,
+i {
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--dark-grayish-blue);
+}
+
+.social-links i:hover {
+  cursor: pointer;
+  color: var(--strong-cyan);
+}
+
+/*  */
+/*  */
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Global Style */
+  html {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 2.2rem;
+    margin: 40px 0 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .header-description {
+    padding: 0;
+  }
+
+  .btn-container {
+    width: 100%;
+    margin: 5px 0;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    line-height: 22px;
+    font-size: 1rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    background-image: url("/frontend-mentor-practice/clipboard-landing-page/bg-header-mobile.png");
+    background-size: cover;
+    height: auto;
+    padding: 120px 5%;
+  }
+
+  .hero img {
+    height: 8rem;
+  }
+
+  /* Features Section */
+  .features {
+    height: auto;
+  }
+
+  .features-content {
+    flex-direction: column;
+  }
+
+  .features-item img {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .features-item {
+    width: 100%;
+    align-items: center;
+  }
+
+  .features h3 {
+    margin: 48px 0 0;
+    text-align: center;
+  }
+
+  .feature p {
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Access Section */
+  .access {
+    height: auto;
+  }
+
+  .access img {
+    width: 100%;
+  }
+
+  /* Workflow Section */
+  .workflow {
+    height: auto;
+  }
+
+  .workflow-toollist {
+    flex-direction: column;
+  }
+
+  .workflow-tool {
+    width: 100%;
+  }
+
+  .workflow-tool h3 {
+    margin: 20px 0 10px;
+  }
+
+  .workflow-tool p {
+    height: auto;
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .partner-logos {
+    padding: 0 25%;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .partner-logos img {
+    width: 8rem;
+    height: auto;
+  }
+
+  /* CTA Section */
+  .cta {
+    height: auto;
+  }
+
+  /* Footer */
+  footer {
+    padding: 80px 5%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  footer img {
+    height: 3rem;
+  }
+
+  .footer-links {
+    padding: 0;
+    grid-template-columns: 1fr;
+    row-gap: 1.8rem;
+  }
+
+  .footer-links a {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .social-links {
+    padding: 0;
+    gap: 2.5rem;
+  }
+
+  .social-links a, i{
+    font-size: 2rem;
+  }
+}
