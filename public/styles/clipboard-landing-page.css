@@ -64,6 +64,7 @@ p {
 }
 
 .btn-container {
+  background-color: transparent;
   margin: 5px 0;
   display: flex;
   justify-content: center;
@@ -167,7 +168,7 @@ p {
 }
 
 .features h3 {
-  margin: 56px 15% 0;
+  margin: 40px 15% 0;
 }
 
 .feature p {
