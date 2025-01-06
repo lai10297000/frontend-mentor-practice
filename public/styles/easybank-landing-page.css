@@ -391,7 +391,8 @@ i:hover {
     display: block;
   }
 
-  #nav-hamburger, #nav-close:hover {
+  #nav-hamburger,
+  #nav-close:hover {
     cursor: pointer;
   }
 
@@ -473,6 +474,11 @@ i:hover {
   }
 
   /* Features Section */
+  .features h2,
+  p {
+    align-self: center;
+  }
+
   .features-item {
     align-items: center;
   }
