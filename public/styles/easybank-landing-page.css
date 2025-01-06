@@ -252,7 +252,7 @@ p {
   margin-bottom: 40px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 1rem;
   justify-content: center;
 }
