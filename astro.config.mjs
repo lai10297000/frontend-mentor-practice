@@ -14,5 +14,9 @@ export default defineConfig({
     svg: true,
   },
 
+  devToolbar: {
+    enabled: false,
+  },
+
   integrations: [react(), tailwind()],
 });
