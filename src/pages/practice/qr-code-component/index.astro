@@ -1,0 +1,46 @@
+---
+import QRCard from "../../../components/qr-code-component/QRCard.jsx";
+---
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/frontend-mentor-practice/images/favicon-32x32.png"
+    />
+    <title>QR Card Component</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        font-size: 15px; /* Set 1rem = 15px */
+        --color-white: hsl(0, 0%, 100%);
+        --color-slate-300: hsl(212, 45%, 89%);
+        --color-slate-500: hsl(216, 15%, 48%);
+        --color-slate-900: hsl(218, 44%, 22%);
+        --font-family: "Outfit", sans-serif;
+        --font-size-lg: 1.4667rem; /* 22px */
+        --font-size-sm: 1rem; /* 15px */
+      }
+
+      body {
+        font-family: var(--font-family);
+        color: var(--color-slate-900);
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      class="bg-[--color-slate-300] flex items-center justify-center min-h-screen"
+    >
+      <QRCard />
+    </main>
+  </body>
+</html>
