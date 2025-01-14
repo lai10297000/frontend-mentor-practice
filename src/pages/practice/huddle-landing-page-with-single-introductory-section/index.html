@@ -21,17 +21,17 @@
     />
     <title>Huddle landing page with single introductory section</title>
   </head>
-  <body role="main">
-    <div class="container">
-      <div class="top-section">
+  <body>
+    <main>
+      <header>
         <img
           src="/frontend-mentor-practice/huddle-landing-page-with-single-introductory-section/logo.svg"
           class="logo"
           alt="logo"
         />
-      </div>
+      </header>
 
-      <div class="middle-section">
+      <section>
         <img
           src="/frontend-mentor-practice/huddle-landing-page-with-single-introductory-section/illustration-mockups.svg"
           class="hero-image"
@@ -48,16 +48,16 @@
             <a class="button" href="#">Register</a>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="button-section">
-        <div class="social-flex" role="complementary">
+      <footer>
+        <div class="social-flex">
           <i class="fa fa-brands fa-facebook-f"></i>
           <i class="fa fa-brands fa-twitter"></i>
           <i class="fa fa-brands fa-instagram"></i>
         </div>
-      </div>
-    </div>
+      </footer>
+    </main>
   </body>
 </html>
 
@@ -76,7 +76,7 @@
     margin: 0;
   }
 
-  .container {
+  main{
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -85,14 +85,14 @@
     background: var(--mobile-image) no-repeat center/cover;
   }
 
-  .top-section {
+  header {
     display: flex;
     justify-content: flex-start;
     padding-top: 40px;
     padding-left: 5%;
   }
 
-  .middle-section {
+  section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,7 +159,7 @@
     width: fit-content;
   }
 
-  .button-section {
+  footer {
     display: flex;
     justify-content: center;
     padding-bottom: 60px;
@@ -198,11 +198,11 @@
   }
 
   @media only screen and (min-width: 600px) {
-    .container {
+    main {
       background: var(--desktop-image) no-repeat center/cover;
     }
 
-    .middle-section {
+    section {
       flex-direction: row;
       align-items: center;
       gap: 40px 20px;
@@ -220,7 +220,7 @@
       align-items: flex-start;
     }
 
-    .button-section {
+    footer {
       padding: 20px;
       justify-content: flex-end;
     }
