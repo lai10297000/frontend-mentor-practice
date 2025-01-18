@@ -31,7 +31,7 @@ const ContactForm = () => {
   };
 
   return (
-    <main className="flex min-h-screen items-center justify-center px-4 py-8">
+    <div className="flex min-h-screen items-center justify-center px-4 py-8">
       <div className="rounded-xl bg-[--color-white] p-6 w-auto sm:p-8 sm:w-[40rem]">
         <h1 className="text-[--color-green-900] text-2xl font-bold py-2 sm:text-3xl">Contact Us</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -225,7 +225,7 @@ const ContactForm = () => {
           close={() => setShowSnackbar(false)}
         />
       )}
-    </main>
+    </div>
   );
 };
 
