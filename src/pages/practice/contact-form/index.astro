@@ -1,0 +1,53 @@
+---
+import ContactForm from "../../../components/contact-form/ContactForm.jsx";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/frontend-mentor-practice/images/favicon-32x32.png"
+    />
+    <title>Contact Form</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        font-size: 16px; /* Set 1rem = 15px */
+        --color-green-200: hsl(148, 38%, 91%);
+        --color-green-600: hsl(169, 82%, 27%);
+        --color-green-900: hsl(168, 82%, 13%);
+        --color-red: hsl(0, 66%, 54%);
+
+        --color-white: hsl(0, 0%, 100%);
+        --color-grey-500: hsl(186, 15%, 59%);
+        --color-grey-900: hsl(187, 24%, 22%);
+
+        --font-family: "Karla", sans-serif;
+      }
+
+      body {
+        font-family: var(--font-family);
+        color: var(--color-grey-900);
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      class="bg-[--color-green-200] flex items-center justify-center min-h-screen"
+    >
+      <ContactForm client:load />
+    </main>
+  </body>
+</html>
