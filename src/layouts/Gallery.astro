@@ -1,0 +1,51 @@
+---
+import Card from "../components/Card.astro";
+const { id, cardData } = Astro.props;
+---
+
+<div id={id}>
+  <h2>Gallery</h2>
+  <div class="line"></div>
+</div>
+<section class="gallery">
+  {
+    cardData.map((card: any, index: any) => (
+      <Card
+        key={index}
+        url={card.url}
+        title={card.title}
+        image={card.image}
+        tags={card.tags}
+      />
+    ))
+  }
+</section>
+
+<style>
+  .gallery {
+    margin: 20px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark-grey);
+    margin: 2rem 0 1rem;
+  }
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-grey);
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
