@@ -2,24 +2,154 @@
 
 ---
 
-<header>
-  <h2>Frontend Mentor Practice</h2>
-</header>
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/frontend-mentor-practice/src/styles/global.css" />
 
-<style>
-  header {
-    background-color: #1d3d5e;
-    height: 80px;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  h2 {
-    color: white;
-    font-size: 20px;
-    display: flex;
-  }
-</style>
+<!-- Content -->
+<header>
+  <nav>
+    <a href="#">
+      itz<span>ANNA</span>versary
+    </a>
+
+    <div>
+      <input type="checkbox" id="nav-toggle" />
+      <label for="nav-toggle">
+        <img
+          id="nav-hamburger"
+          src="/frontend-mentor-practice/src/assets/icon-hamburger.svg"
+          alt="hamburger"
+        />
+        <img
+          id="nav-close"
+          src="/frontend-mentor-practice/src/assets/icon-close.svg"
+          alt="close"
+        />
+      </label>
+
+      <label id="overlay" for="nav-toggle"></label>
+      <ul id="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <!-- <li><a href="#">Blog</a></li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <style>
+    span {
+      color: var(--blue);
+    }
+
+    header {
+      background-color: var(--white);
+      color: var(--primary);
+      position: fixed;
+      width: 100%;
+      max-width: 100vw;
+      z-index: 1000;
+    }
+
+    nav {
+      height: 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10%;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a:hover {
+      color: var(--blue);
+      border: none;
+      border-bottom: 1px solid var(--blue);
+    }
+
+    nav ul li a {
+      padding: 5px 0 0;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    #nav-toggle,
+    #nav-hamburger,
+    #nav-close {
+      display: none;
+    }
+
+    @media screen and (max-width: 428px) {
+      #nav-hamburger {
+        display: block;
+      }
+
+      #nav-hamburger,
+      #nav-close:hover {
+        cursor: pointer;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: fixed;
+        top: 6rem;
+        width: 86%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--white);
+        /* border-radius: 0.1rem; */
+        padding: 1rem 0;
+        z-index: 999;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+
+      #nav-toggle:checked ~ label #nav-hamburger {
+        display: none;
+      }
+
+      #nav-toggle:checked ~ label #nav-close {
+        display: block;
+      }
+
+      #nav-toggle:checked ~ #nav-list {
+        display: flex;
+      }
+
+      #nav-toggle:checked ~ #overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.2)
+        );
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 5rem;
+        left: 0;
+      }
+
+      nav ul li a {
+        height: 2rem;
+        /* color: var(--blue); */
+      }
+
+      nav ul li a:hover {
+        color: var(--blue);
+        border: none;
+        border-bottom: 1px solid var(--blue);
+      }
+    }
+  </style>
+</header>

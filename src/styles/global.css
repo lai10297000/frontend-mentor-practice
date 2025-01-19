@@ -1,6 +1,17 @@
+:root {
+  --white: #f1f1f1;
+  --primary: #1a1a1a;
+  --dark-grey: #222526;
+  --light-grey: #e0e0e0;
+  --blue: #263a99;
+  /* --blue: #003cff; */
+}
+
 html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+  background-color: var(--white);
+  color: var(--primary);
+  scroll-behavior: smooth;
+  /* font-family: sans-serif; */
 }
 
 body {
@@ -9,9 +20,4 @@ body {
 * {
   padding: 0;
   margin: 0;
-}
-
-h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
 }

@@ -1,50 +1,58 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Card from "../components/Card.astro";
-const pageTitle = "";
+import Hero from "../components/Hero.astro";
+import Gallery from "../layouts/Gallery.astro";
+
+const pageTitle = "Frontend Mentor Practice";
+const cardData = [
+  {
+    url: "/frontend-mentor-practice/practice/huddle-landing-page-with-single-introductory-section",
+    title: "Huddle Landing Page with Single Introductory Section",
+    image: "/frontend-mentor-practice/images/huddle-241223-124158.png",
+    tags: ["HTML", "CSS"],
+  },
+  {
+    url: "/frontend-mentor-practice/practice/sunnyside-agency-landing-page",
+    title: "Sunnyside Agency Landing Page",
+    image: "/frontend-mentor-practice/images/sunnyside-241223-124223.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    url: "/frontend-mentor-practice/practice/clipboard-landing-page",
+    title: "Clipboard Landing Page",
+    image: "/frontend-mentor-practice/images/clipboard-241230-023543.png",
+    tags: ["HTML", "CSS"],
+  },
+  {
+    url: "/frontend-mentor-practice/practice/easybank-landing-page",
+    title: "Easybank Landing Page",
+    image: "/frontend-mentor-practice/images/easybank-250106-030000.png",
+    tags: ["HTML", "CSS"],
+  },
+  {
+    url: "/frontend-mentor-practice/practice/qr-code-component",
+    title: "QR Code Component",
+    image: "/frontend-mentor-practice/images/qr-code-250113-123939.png",
+    tags: ["React", "TailwindCSS", "Astro"],
+  },
+  {
+    url: "/frontend-mentor-practice/practice/contact-form",
+    title: "Contact Form",
+    image: "/frontend-mentor-practice/images/contact-form-250118-080501.png",
+    tags: ["React", "TailwindCSS", "Astro", "React Hook Form"],
+  },
+];
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <div>
-    <Card
-      url="./practice/huddle-landing-page-with-single-introductory-section"
-      title="Huddle Landing Page with Single Introductory Section"
-      image="/frontend-mentor-practice/images/huddle-241223-124158.png"
-    />
-    <Card
-      url="./practice/sunnyside-agency-landing-page"
-      title="Sunnyside Agency Landing Page"
-      image="/frontend-mentor-practice/images/sunnyside-241223-124223.png"
-    />
-    <Card
-      url="./practice/clipboard-landing-page"
-      title="Clipboard Landing Page"
-      image="/frontend-mentor-practice/images/clipboard-241230-023543.png"
-    />
-    <Card
-      url="./practice/easybank-landing-page"
-      title="Easybank Landing Page"
-      image="/frontend-mentor-practice/images/easybank-250106-030000.png"
-    />
-    <Card
-      url="./practice/qr-code-component"
-      title="QR Code Component"
-      image="/frontend-mentor-practice/images/qr-code-250113-123939.png"
-    />
-    <Card
-      url="./practice/contact-form"
-      title="Contact Form"
-      image="/frontend-mentor-practice/images/contact-form-250118-080501.png"
-    />
-  </div>
-</BaseLayout>
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/frontend-mentor-practice/src/styles/global.css" />
 
-<style>
-  div {
-    padding: 80px 5% 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    justify-content: center;
-  }
-</style>
+<BaseLayout pageTitle={pageTitle}>
+  <Hero
+    id="about"
+    title="Frontend Mentor Practice"
+    subtitle="Start from 2024"
+    content="Here are some of the projects I've completed from Frontend Mentor. Click on the cards to view the project details."
+  />
+  <Gallery id="gallery" cardData={cardData} />
+</BaseLayout>

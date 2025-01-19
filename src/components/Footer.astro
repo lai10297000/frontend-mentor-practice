@@ -2,18 +2,41 @@
 
 ---
 
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/frontend-mentor-practice/src/styles/global.css" />
+
 <footer>
-  <p>Copyright &copy; 2024-2025 Anna Lai</p>
+  <div>
+    <p>Challenge by Frontend Mentor |</p>
+    <p>Copyright &copy; 2024-2025 itz<span>ANNA</span>versary</p>
+  </div>
 </footer>
 
 <style>
   footer {
-    background-color: #1d3d5e;
-    color: #e8e5e5;
-    height: 60px;
+    padding: 0 10%;
+    height: 5rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 0.8rem;
+  }
+
+  div {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  span {
+    color: var(--blue);
+  }
+
+  @media (max-width: 505px) {
+    div {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 </style>
