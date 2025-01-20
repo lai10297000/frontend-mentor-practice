@@ -2,9 +2,6 @@
 const { url, title, image, tags = [] } = Astro.props;
 ---
 
-<!-- Stylesheet -->
-<link rel="stylesheet" href="/frontend-mentor-practice/src/styles/global.css" />
-
 <!-- Content -->
 <a href={url} class="card">
   <img src={image} alt={title} class="card-image" />
@@ -12,9 +9,13 @@ const { url, title, image, tags = [] } = Astro.props;
     <h3 class="card-title">{title}</h3>
     <!-- 顯示 Tags -->
     <div class="card-tags">
-      {tags.map((tag:any, index:any) => (
-        <span key={index} class="tag">{tag}</span>
-      ))}
+      {
+        tags.map((tag: any, index: any) => (
+          <span key={index} class="tag">
+            {tag}
+          </span>
+        ))
+      }
     </div>
   </div>
 </a>
@@ -70,21 +71,19 @@ const { url, title, image, tags = [] } = Astro.props;
     transition: color 0.3s ease;
   }
 
-
   .card-tags {
     margin-top: 8px;
   }
 
   .tag {
-  display: inline-flex;
-  flex-wrap: wrap;
-  background-color: var(--light-grey);
-  margin: 2px;
-  padding: 4px 8px;
-  font-size: 0.8rem;
-  color: var(--dark-grey);
-}
-
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color: var(--light-grey);
+    margin: 2px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    color: var(--dark-grey);
+  }
 
   .tag:hover {
     background-color: var(--blue);
