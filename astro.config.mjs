@@ -5,6 +5,8 @@ import react from "@astrojs/react";
 
 import tailwind from "@astrojs/tailwind";
 
+import vue from "@astrojs/vue";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://lai10297000.github.io",
@@ -18,5 +20,5 @@ export default defineConfig({
     enabled: false,
   },
 
-  integrations: [react(), tailwind()],
+  integrations: [react(), tailwind(), vue()],
 });
