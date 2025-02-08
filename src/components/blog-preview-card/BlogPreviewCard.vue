@@ -24,7 +24,7 @@
       <img
         :src="authorImage"
         :alt="authorName"
-        class="w-8 h-8 rounded-full mr-2"
+        class="w-8 h-8 rounded-full"
       />
       <p class="text-sm leading-[1.5] font-extrabold text-[--color-gray-950]">{{ authorName }}</p>
     </div>
