@@ -1,0 +1,60 @@
+---
+import BlogPreviewCard from "../../../components/blog-preview-card/BlogPreviewCard.vue";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/frontend-mentor-practice/images/favicon-32x32.png"
+    />
+    <title>Vue Card Page</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style sheet -->
+    <style>
+      :root {
+        font-size: 16px; /* Set 1rem = 16px */
+        --color-white: hsl(0, 0%, 100%);
+        --color-yellow: hsl(47, 88%, 63%);
+        --color-gray-500: hsl(0, 0%, 42%);
+        --color-gray-950: hsl(0, 0%, 7%);
+        --font-family: "Figtree", sans-serif;
+        --font-size-lg: 1.4667rem; /* 22px */
+        --font-size-sm: 1rem; /* 16px */
+      }
+
+      body {
+        font-family: var(--font-family);
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      class="flex justify-center items-center min-h-screen bg-[--color-yellow]"
+    >
+      <BlogPreviewCard
+        client:visible
+        imageSrc="/frontend-mentor-practice/blog-preview-card/illustration-article.svg"
+        imageAlt="HTML & CSS Foundations"
+        category="Learning"
+        publishedDate="21 Dec 2023"
+        title="HTML & CSS Foundations"
+        description="These languages are the backbone of every website, defining structure, content, and presentation."
+        authorImage="/frontend-mentor-practice/blog-preview-card/image-avatar.webp"
+        authorName="Greg Hooper"
+      />
+    </main>
+  </body>
+</html>
