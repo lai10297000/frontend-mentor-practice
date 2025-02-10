@@ -9,7 +9,7 @@ const QRCard = ({ imageSrc, imageAlt, title, content }) => {
           className="w-[288px] rounded-[10px] overflow-hidden"
         />
 
-      <div className="w-[288px] flex flex-col gap-y-[16px] px-4">
+      <div className="w-[288px] flex flex-col gap-y-[16px] px-[16px]">
         <h1 className="font-bold text-[color:var(--color-slate-900)] text-[22px] leading-[1.2] tracking-normal">
           {title}
         </h1>
